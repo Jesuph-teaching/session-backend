@@ -1,455 +1,358 @@
 {
-	"info": {
-		"_postman_id": "bebfc487-b9fb-42fe-958f-21a74055318c",
-		"name": "Session Backend",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "5060370"
-	},
-	"item": [
-		{
-			"name": "Auth",
-			"item": [
-				{
-					"name": "Get User",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/auth",
-							"host": [
-								"protocol": "http",
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"auth"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Logout",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/auth",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"auth"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Register User",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"password123\",\n  \"birthDate\": \"1990-01-01\"\n}"
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/v1/auth/register",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"auth",
-								"register"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Login User",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"password123\"\n}"
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/v1/auth/login",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"auth",
-								"login"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Participants",
-			"item": [
-				{
-					"name": "Get All Participants",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/participants",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"participants"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Participant",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/participants/{{constParticipant}}",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"participants",
-								"{{constParticipant}}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Create Participant",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"Jane Doe\",\n  \"email\": \"jane@mail.com\",\n  \"birthDate\":\"2024-06-28T23:08:02.758Z\"\n}"
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/v1/participants",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"participants"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update Participant",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"Fatima Doe\",\n  \"email\": \"fatima@mail.com\",\n  \"birthDate\":\"2024-06-28T23:08:02.758Z\"\n}"
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/v1/participants/667f4306aea9609790cda87b",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"participants",
-								"667f4306aea9609790cda87b"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Participant",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/participants/{{tempParticipant}}",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"participants",
-								"{{tempParticipant}}"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Sessions",
-			"item": [
-				{
-					"name": "Get All Sessions",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/sessions",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"sessions"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Session",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/sessions/{{constSession}}",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"sessions",
-								"{{constSession}}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Create Session",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"Session 2\",\n    \"startedAt\": \"2024-05-28T23:08:02.758Z\",\n    \"endsAt\": \"2024-06-18T23:08:02.758Z\"\n}"
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/v1/sessions",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"sessions"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update Session",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"Session 1\",\n    \"startedAt\": \"2024-06-28T23:08:02.758Z\",\n    \"endsAt\": \"2024-07-28T23:08:02.758Z\"\n}"
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/v1/sessions/{{constSession}}",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"sessions",
-								"{{constSession}}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Session",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/sessions/{{tempSession}}",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"sessions",
-								"{{tempSession}}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Add Participant to Session",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"participantId\": \"{{constParticipant}}\",\n    \"rating\":5\n}"
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/v1/sessions/{{constSession}}/participant",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"sessions",
-								"{{constSession}}",
-								"participant"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Remove Participant from Session",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/sessions/{{constSession}}/participant/{{constParticipant}}",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"sessions",
-								"{{constSession}}",
-								"participant",
-								"{{constParticipant}}"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		}
-	],
-	"variable": [
-		{
-			"key": "tempSession",
-			"value": "667f44f10c369938154c32f9"
-		},
-		{
-			"key": "constSession",
-			"value": "667f44575bd76a86a015cd91"
-		},
-		{
-			"key": "constParticipant",
-			"value": "667f4306aea9609790cda87b"
-		},
-		{
-			"key": "tempParticipant",
-			"value": "667f45a20c369938154c330a"
-		}
-	]
+  "info": {
+    "_postman_id": "bebfc487-b9fb-42fe-958f-21a74055318c",
+    "name": "Session Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "5060370"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Get User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/auth",
+              "host": ["http", "localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "auth"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/auth",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "auth"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"password123\",\n  \"birthDate\": \"1990-01-01\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/auth/register",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "auth", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/auth/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "auth", "login"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Participants",
+      "item": [
+        {
+          "name": "Get All Participants",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/participants",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "participants"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Participant",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/participants/{{constParticipant}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "participants", "{{constParticipant}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Participant",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Jane Doe\",\n  \"email\": \"jane@mail.com\",\n  \"birthDate\":\"2024-06-28T23:08:02.758Z\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/participants",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "participants"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Participant",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Fatima Doe\",\n  \"email\": \"fatima@mail.com\",\n  \"birthDate\":\"2024-06-28T23:08:02.758Z\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/participants/667f4306aea9609790cda87b",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "participants", "667f4306aea9609790cda87b"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Participant",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/participants/{{tempParticipant}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "participants", "{{tempParticipant}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Sessions",
+      "item": [
+        {
+          "name": "Get All Sessions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/sessions",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "sessions"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Session",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/sessions/{{constSession}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "sessions", "{{constSession}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Session",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Session 2\",\n    \"startedAt\": \"2024-05-28T23:08:02.758Z\",\n    \"endsAt\": \"2024-06-18T23:08:02.758Z\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/sessions",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "sessions"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Session",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Session 1\",\n    \"startedAt\": \"2024-06-28T23:08:02.758Z\",\n    \"endsAt\": \"2024-07-28T23:08:02.758Z\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/sessions/{{constSession}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "sessions", "{{constSession}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Session",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/sessions/{{tempSession}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "v1", "sessions", "{{tempSession}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Participant to Session",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"participantId\": \"{{constParticipant}}\",\n    \"rating\":5\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/sessions/{{constSession}}/participant",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "sessions",
+                "{{constSession}}",
+                "participant"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Participant from Session",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/sessions/{{constSession}}/participant/{{constParticipant}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "sessions",
+                "{{constSession}}",
+                "participant",
+                "{{constParticipant}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "tempSession",
+      "value": "667f44f10c369938154c32f9"
+    },
+    {
+      "key": "constSession",
+      "value": "667f44575bd76a86a015cd91"
+    },
+    {
+      "key": "constParticipant",
+      "value": "667f4306aea9609790cda87b"
+    },
+    {
+      "key": "tempParticipant",
+      "value": "667f45a20c369938154c330a"
+    }
+  ]
 }
