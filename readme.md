@@ -17,13 +17,13 @@
 Clone the repository
 
 ```bash
-git clone
+git clone https://github.com/Jesuph-teaching/session-backend.git
 ```
 
 Navigate to the project directory
 
 ```bash
-cd <project-directory>
+cd ./session-backend
 ```
 
 Create a .env file in the root of the project directory
