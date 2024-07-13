@@ -15,9 +15,9 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/auth",
+              "raw": "http://localhost:4000/api/v1/auth",
               "host": ["http", "localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "auth"]
             }
           },
@@ -29,10 +29,10 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/auth",
+              "raw": "http://localhost:4000/api/v1/auth",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "auth"]
             }
           },
@@ -53,10 +53,10 @@
               "raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"password123\",\n  \"birthDate\": \"1990-01-01\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/v1/auth/register",
+              "raw": "http://localhost:4000/api/v1/auth/register",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "auth", "register"]
             }
           },
@@ -77,10 +77,10 @@
               "raw": "{\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"password123\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/v1/auth/login",
+              "raw": "http://localhost:4000/api/v1/auth/login",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "auth", "login"]
             }
           },
@@ -97,10 +97,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/participants",
+              "raw": "http://localhost:4000/api/v1/participants",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "participants"]
             }
           },
@@ -112,10 +112,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/participants/{{constParticipant}}",
+              "raw": "http://localhost:4000/api/v1/participants/{{constParticipant}}",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "participants", "{{constParticipant}}"]
             }
           },
@@ -136,10 +136,10 @@
               "raw": "{\n  \"name\": \"Jane Doe\",\n  \"email\": \"jane@mail.com\",\n  \"birthDate\":\"2024-06-28T23:08:02.758Z\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/v1/participants",
+              "raw": "http://localhost:4000/api/v1/participants",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "participants"]
             }
           },
@@ -160,10 +160,10 @@
               "raw": "{\n  \"name\": \"Fatima Doe\",\n  \"email\": \"fatima@mail.com\",\n  \"birthDate\":\"2024-06-28T23:08:02.758Z\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/v1/participants/667f4306aea9609790cda87b",
+              "raw": "http://localhost:4000/api/v1/participants/667f4306aea9609790cda87b",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "participants", "667f4306aea9609790cda87b"]
             }
           },
@@ -175,10 +175,10 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/participants/{{tempParticipant}}",
+              "raw": "http://localhost:4000/api/v1/participants/{{tempParticipant}}",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "participants", "{{tempParticipant}}"]
             }
           },
@@ -195,10 +195,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/sessions",
+              "raw": "http://localhost:4000/api/v1/sessions",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "sessions"]
             }
           },
@@ -210,10 +210,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/sessions/{{constSession}}",
+              "raw": "http://localhost:4000/api/v1/sessions/{{constSession}}",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "sessions", "{{constSession}}"]
             }
           },
@@ -234,10 +234,10 @@
               "raw": "{\n    \"name\": \"Session 2\",\n    \"startedAt\": \"2024-05-28T23:08:02.758Z\",\n    \"endsAt\": \"2024-06-18T23:08:02.758Z\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/v1/sessions",
+              "raw": "http://localhost:4000/api/v1/sessions",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "sessions"]
             }
           },
@@ -258,10 +258,10 @@
               "raw": "{\n    \"name\": \"Session 1\",\n    \"startedAt\": \"2024-06-28T23:08:02.758Z\",\n    \"endsAt\": \"2024-07-28T23:08:02.758Z\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/v1/sessions/{{constSession}}",
+              "raw": "http://localhost:4000/api/v1/sessions/{{constSession}}",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "sessions", "{{constSession}}"]
             }
           },
@@ -273,10 +273,10 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/sessions/{{tempSession}}",
+              "raw": "http://localhost:4000/api/v1/sessions/{{tempSession}}",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": ["api", "v1", "sessions", "{{tempSession}}"]
             }
           },
@@ -297,10 +297,10 @@
               "raw": "{\n    \"participantId\": \"{{constParticipant}}\",\n    \"rating\":5\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/v1/sessions/{{constSession}}/participant",
+              "raw": "http://localhost:4000/api/v1/sessions/{{constSession}}/participant",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": [
                 "api",
                 "v1",
@@ -318,10 +318,10 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/sessions/{{constSession}}/participant/{{constParticipant}}",
+              "raw": "http://localhost:4000/api/v1/sessions/{{constSession}}/participant/{{constParticipant}}",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "4000",
               "path": [
                 "api",
                 "v1",
@@ -333,6 +333,154 @@
             }
           },
           "response": []
+        }
+      ]
+    },
+    {
+      "name": "Todo",
+      "item": [
+        {
+          "name": "Get All Todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:4000/api/v1/todos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["api", "v1", "todos"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Todo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:4000/api/v1/todos/667f44f10c369938154c32f9",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["api", "v1", "todos", "667f44f10c369938154c32f9"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Todo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Todo 1\",\n  \"description\": \"Description 1\",\n  \"completed\": false\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/v1/todos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["api", "v1", "todos"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Todo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Todo 2\",\n  \"description\": \"Description 2\",\n  \"completed\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/v1/todos/667f44f10c369938154c32f9",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["api", "v1", "todos", "667f44f10c369938154c32f9"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Todo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:4000/api/v1/todos/667f44f10c369938154c32f9",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["api", "v1", "todos", "667f44f10c369938154c32f9"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Complete todo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:4000/api/v1/todos/667f44f10c369938154c32f9/complete",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": [
+                "api",
+                "v1",
+                "todos",
+                "667f44f10c369938154c32f9",
+                "complete"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Uncomplete todo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:4000/api/v1/todos/667f44f10c369938154c32f9/uncomplete",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": [
+                "api",
+                "v1",
+                "todos",
+                "667f44f10c369938154c32f9",
+                "uncomplete"
+              ]
+            }
+          }
         }
       ]
     }

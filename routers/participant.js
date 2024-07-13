@@ -17,12 +17,19 @@ router.post("/", async (req, res) => {
   try {
     const participant = new Participant(result.data);
     await participant.save();
+
     res.status(201).json(participant);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
-
+function waitSeconds(seconds) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("done");
+    }, seconds * 1000);
+  });
+}
 router.get("/", async (req, res) => {
   try {
     const participants = await Participant.find();
@@ -66,6 +73,8 @@ router.delete("/:id", async (req, res) => {
     const participant = await Participant.findByIdAndDelete(req.params.id);
     if (!participant)
       return res.status(404).json({ error: "Participant not found" });
+    await waitSeconds(5);
+
     res.json({ message: "Participant deleted" });
   } catch (error) {
     res.status(500).json({ error: error.message });

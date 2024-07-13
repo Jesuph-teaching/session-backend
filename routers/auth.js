@@ -27,12 +27,14 @@ router.post("/register", async (req, res) => {
   try {
     const user = new User(result.data);
     await user.save();
-    res.cookie("token", user.generateToken(), {
+    const token = user.generateToken();
+
+    res.cookie("token", token, {
       httpOnly: true,
       sameSite: "strict",
       expires: new Date(Date.now() + week),
     });
-    res.status(201).json(user.toObject());
+    res.status(201).json({ user: user.toObject(), accessToken: token });
   } catch (error) {
     // if email is already taken
     if (error.code === 11000) {
@@ -50,12 +52,13 @@ router.post("/login", async (req, res) => {
     if (!user || !(await user.comparePassword(password))) {
       return res.status(400).json({ error: "Invalid credentials" });
     }
-    res.cookie("token", user.generateToken(), {
+    const token = user.generateToken();
+    res.cookie("token", token, {
       httpOnly: true,
       sameSite: "strict",
       expires: new Date(Date.now() + week),
     });
-    res.json(user.toObject());
+    res.json({ user: user.toObject(), accessToken: token });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
