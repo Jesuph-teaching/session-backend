@@ -4,7 +4,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const express = require("express");
 const mongoose = require("mongoose");
-
+const morgan = require("morgan");
 const v1Router = require("./routers/v1");
 
 const PORT = process.env.PORT || 3000;
@@ -15,7 +15,7 @@ const DB_HOST = process.env.DB_HOST,
 
 const app = express();
 
-app.use("/api/v1", v1Router);
+app.use("/api/v1", morgan("dev"), v1Router);
 
 app.get("/", (req, res) => {
   res.json({
